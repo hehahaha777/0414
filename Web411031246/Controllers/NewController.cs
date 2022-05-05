@@ -23,7 +23,10 @@ namespace Web411031246.Controllers
         }
         public ActionResult HW3()
         {
+            ViewBag.hoyeah = "liubi";
+            ViewData["liubi"] = 100;
             return View();
+
         }
 
     }
