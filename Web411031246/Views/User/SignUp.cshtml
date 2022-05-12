@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+
+@using (Html.BeginForm("SignUp", "User", FormMethod.Post))
+{
+    <p> 姓名：@Html.TextBox("name")@ViewBag.NameMessage</p>
+    <p> 账号：@Html.TextBox("account")@ViewBag.accountMessage</p>
+    <p> 密码：@Html.Password("password")@ViewBag.passwordMessage</p>
+    <p>@ViewBag.Message</p>
+    <input type="submit"  value="注册" />
+
+
+}
+
