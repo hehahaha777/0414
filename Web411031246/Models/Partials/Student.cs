@@ -21,17 +21,23 @@ namespace Web411031246.Models
         [Display(Name= "姓名")]
         [StringLength(5, MinimumLength =2, ErrorMessage ="请输入2~5个字")]
 
-        public string Name { get; set; }
+        public string UserName { get; set; }
 
         [Required(ErrorMessage = "請填寫學號")]
         [Display(Name = "學號")]
-        [StringLength(5, ErrorMessage = "请输入1~10個字")]
+        [StringLength(10, ErrorMessage = "请输入1~10個字")]
         public string Number { get; set; }
 
         [Required(ErrorMessage = "請填寫Email")]
         [Display(Name = "Email")]
         [EmailAddress]
+
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "必填欄位")]
+        [Display(Name = "是否註冊")]
+        public bool IsActive { get; set; }
+
 
     }
 }
